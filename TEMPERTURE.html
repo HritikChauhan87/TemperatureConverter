@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            margin-top: 0;
+            color: #04066d;
+        }
+        input[type="number"] {
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            background-color: #f2f2f2;
+            margin-top: 15px;
+        }
+        select {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: #ff7a5a;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #ff5b3a;
+        }
+        #result{
+            margin-top: 20px;
+            font-size: 30px;
+            color: #04066d;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+<body>
+    <div id="container">
+        <h1>Temperature Converter</h1>
+        <input type="number" id="temperature" placeholder="Enter temperature" step="0.01" required>
+        <br><br>
+        <label for="from">From:</label>
+        <select id="from">
+            <option value="celsius">&#176;Celsius</option>
+            <option value="fahrenheit">&#176;Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        <br><br>
+        <label for="to">To:</label>
+        <select id="to">
+            <option value="celsius">&#176;Celsius</option>
+            <option value="fahrenheit">&#176;Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        <br><br>
+        <button id="convertBtn">Convert</button>
+        <div id="result"></div>
+    </div>
+    
+    <script src="conversion_code.js">
+    </script>
+</body>
+</html>
